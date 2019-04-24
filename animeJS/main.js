@@ -37,7 +37,7 @@ anime({
     }
 });
 */
-anime({
+var playPause = anime({
     targets:'div.box',
     translateY: [
         {value: 250, duration: 500},
@@ -49,5 +49,9 @@ anime({
     },
     backgroundColor: '#000',
     delay: function(el, i, l){return i * 1000},
+    autoplay: false,
+    loop: true
+});
 
-}); 
+document.querySelector('#boxes .play').onclick = playPause.play;
+document.querySelector('#boxes .pause').onclick = playPause.pause;
