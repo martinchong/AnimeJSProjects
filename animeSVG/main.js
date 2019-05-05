@@ -7,3 +7,14 @@ anime({
     direction: 'alternate',
     loop: true
   });
+
+var path = anime.path('.path3');
+anime({
+  targets: '.box',
+  translateX: path('x'),
+  translateY: path('y'),
+  rotate: path('angle'),
+  easing: 'linear',
+  duration: 1000,
+  loop: true
+});
