@@ -19,13 +19,5 @@ anime({
   direction: 'alternate',
   easing: 'linear',
   duration: 1000,
-  loop: true,
-  loopBegin: function(anim) {
-    loopBegan++;
-    beginLogEl.value = 'loop began : ' + loopBegan;
-  },
-  loopComplete: function(anim) {
-    loopCompleted++;
-    completeLogEl.value = 'loop completed : ' + loopCompleted;
-  }
+  loop: true
 });
