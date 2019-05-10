@@ -26,9 +26,18 @@
 .log {
   width: 100%;
   height: 22px;
-  background: transparent;
-  color: currentColor;
+  background: grey;
+  color: black;
   border: none;
   font-size: 16px;
   text-align: center;
+}
+
+.box2{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 4px;
+  display: inline-block;
+  background-color: aqua;
 }

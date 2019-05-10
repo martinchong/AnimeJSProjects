@@ -9,8 +9,6 @@ anime({
   });
 
 var path = anime.path('.path3');
-var loopBegan = 0;
-var loopCompleted = 0;
 anime({
   targets: '.box',
   translateX: path('x'),
@@ -21,3 +19,25 @@ anime({
   duration: 1000,
   loop: true
 });
+
+var beginLogB = document.querySelector('.begin-log');
+var completeLogB = document.querySelector('.completed-log');
+var loopBegan = 0;
+var loopCompleted = 0;
+
+var loopBegin = anime({
+  targets: '.box2',
+  translateX: 100,
+  loop: true,
+  direction: 'alternate',
+  easing: 'easeInOutCirc',
+  loopBegin: function(anim) {
+    loopBegan++;
+    beginLogB.value = 'loop began : ' + loopBegan;
+  },
+  loopComplete: function(anim) {
+    loopCompleted++;
+    completeLogB.value = 'loop completed : ' + loopCompleted;
+  }
+});
+
